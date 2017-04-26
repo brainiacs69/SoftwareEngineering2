@@ -1,0 +1,64 @@
+
+<md-dialog >
+    <md-dialog-content style="max-width:800px;max-height:810px; width:450px;">
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Login">
+                
+
+
+                    <md-content layout="column" layout-padding>
+                        
+
+
+                            <md-input-container>
+                                <label>Username</label>
+                                <input ng-model="user.username" type="text">
+                            </md-input-container>
+
+                            <md-input-container>
+                                <label>Password</label>
+                                <input ng-model="user.password" type="password">
+                            </md-input-container>
+
+                            <md-button class="md-raised md-primary" ng-click="login()">Login</md-button>
+                            
+                    </md-content>
+
+
+
+            </md-tab>
+            <md-tab label="Register">
+
+                    <md-content layout="column" layout-padding>
+
+                        <md-input-container>
+                            <label>Name</label>
+                            <input ng-model="newUser.name">
+                        </md-input-container>
+
+
+                        <md-input-container>
+                            <label>Username</label>
+                            <input ng-model="newUser.username" type="text">
+                        </md-input-container>
+
+                        <md-input-container>
+                            <label>Password</label>
+                            <input ng-model="newUser.password" type="password">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Role</label>
+                            <md-select ng-model="newUser.role">
+                                <md-option>Student</md-option>
+                                <md-option>Teacher</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-button class="md-raised md-primary" ng-click="register()">Register</md-button>
+                    </md-content>
+
+            </md-tab>
+        </md-tabs>
+    </md-dialog-content>
+</md-dialog>

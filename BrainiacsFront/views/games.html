@@ -1,0 +1,31 @@
+<div layout="row" layout-align="center none">
+    <md-input-container>
+        <label>Course</label>
+        <md-select ng-model="query">
+            <md-option></md-option>
+            <md-option ng-repeat="course in allCourses">{{course.name}}</md-option>
+        </md-select>
+    </md-input-container>
+</div>
+
+
+<div class='md-padding' layout="row" layout-align="center none" layout-wrap>
+
+
+
+
+
+
+    <md-card style="width: 350px;" ng-repeat="game in gamesList | filter:query">
+        <img src="../images/icons/noImage.jpg" class="md-card-image" alt="No Image">
+        <md-card-content>
+            <h2>{{game.name}}</h2>
+            <md-chips><md-chip>{{game.course.name}}</md-chip></md-chips>
+        </md-card-content>
+        <div class="md-actions" layout="row" layout-align="end center">
+            <md-button class="md-raised md-accent" ng-click="play(game.id)">Play</md-button>
+        </div>
+    </md-card>
+</div>
+
+

@@ -1,0 +1,53 @@
+<md-dialog >
+    <md-dialog-content style="max-width:800px;max-height:810px; width:450px;">
+
+
+
+
+        <md-content layout="column" layout-padding>
+
+
+
+            <md-input-container>
+                <label>Question</label>
+                <input ng-model="question.question" type="text">
+            </md-input-container>
+
+
+            <md-radio-group id="answers">
+                <div layout="row" >
+                    <md-input-container>
+                        <label>Answer</label>
+                        <textarea ng-model="answer.answer" style="width: 300px;"></textarea>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Correct Answer</label>
+                        <md-select ng-model="answer.correct">
+                            <md-option>{{true}}</md-option>
+                            <md-option>{{false}}</md-option>
+                        </md-select>
+                    </md-input-container > 
+                    
+                </div>
+                
+                <!--<div layout="row" >
+                    <md-input-container>
+                        <label>Correct Answer</label>
+                        <md-select ng-model="correctAnswer" style="width: 300px;">
+                            <md-option>1</md-option>
+                            <md-option>2</md-option>
+                            <md-option>3</md-option>
+                            <md-option>4</md-option>
+                        
+                        </md-select>
+                    </md-input-container > 
+                </div>-->
+            </md-radio-group>
+
+
+            <md-button class="md-raised md-primary" ng-click="addA()">Add Answer</md-button>
+            <md-button class="md-raised md-primary" ng-click="addQ()">Add Question</md-button>
+
+        </md-content>
+    </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,27 @@
+<md-content layout="column" layout-align="center center" layout-padding>
+
+    <h1 md-colors="{color: 'accent'}">{{playedGame.name}}</h1>
+
+    <md-list flex style="width:400px;">
+        <md-list-item class="md-3-line md-long-text" ng-repeat="question in playedGame.questions">
+
+            <div class="md-list-item-text">
+                <h3 md-colors="{color: 'accent'}">{{question.question}}</h3>
+                <br>
+                <md-radio-group ng-model="userAnswers[$index]">
+
+                    <md-radio-button value="{{answer.answer}}"   ng-repeat="answer in question.answers" class="md-accent">{{answer.answer}}</md-radio-button>
+                </md-radio-group>
+            </div>
+
+            <md-divider></md-divider>
+
+        </md-list-item>
+
+    </md-list>
+    <md-button class="md-raised md-accent" ng-click="submitAnswers()">Submit Answers</md-button>
+
+
+
+
+</md-content>

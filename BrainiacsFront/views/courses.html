@@ -1,0 +1,18 @@
+<md-content layout="column" layout-align="center center" layout-padding>
+    <md-list flex>
+        <md-list-item class="md-3-line md-long-text" ng-repeat="course in courses">
+            <img src="../images/icons/noImage.jpg" class="md-avatar" alt="No Image" style="height: 100px; width:100px"/>
+            <div class="md-list-item-text">
+                <h3 md-colors="{color: 'accent'}">{{course.name}}</h3>
+                <p>{{course.description}}</p>
+                <small>{{course.teacher.name}}</small>
+            </div>
+        
+        <md-divider></md-divider>
+    
+        </md-list-item>
+        
+    </md-list>
+
+
+</md-content>

@@ -1,0 +1,38 @@
+<md-content layout="column" layout-align="center center" layout-padding>
+
+    <h1 md-colors="{color: 'accent'}">Create Game</h1>
+
+    <md-content layout="column" layout-padding>
+
+
+
+        <md-input-container>
+            <label>Game Name</label>
+            <input ng-model="name" type="text">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Game Description</label>
+            <textarea ng-model="description"></textarea>
+        </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Choose Course</label>
+            <md-select ng-model="game.course" >
+                <md-option ng-repeat="course in courses">{{course.name}}</md-option>
+            </md-select>
+        </md-input-container>
+
+
+
+
+
+        <md-button class="md-raised md-primary"  ng-click="addQuestion()">Add Question</md-button>
+
+
+    </md-content>
+    <md-button class="md-raised md-accent" ng-click="createGame()">Create Game</md-button>
+
+
+
+</md-content>
